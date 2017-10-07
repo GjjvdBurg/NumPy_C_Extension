@@ -18,7 +18,7 @@ Notes
 =====
 
 Numpy_C_Skeleton is free software, licensed under the GNU General Public 
-License, version 2 or later (GPLv2). Copyright G.J.J. van den Burg, all rights 
+License, version 3 or later (GPLv3). Copyright G.J.J. van den Burg, all rights 
 reserved. 
 
 If you have encounter any problems, please open an issue on `GitHub 
