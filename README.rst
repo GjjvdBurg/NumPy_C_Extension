@@ -1,6 +1,6 @@
-========================
-NumPy C Skeleton Package
-========================
+============================
+NumPy C/C++ Skeleton Package
+============================
 
 This is a skeleton package that can be used to easily create a Python package 
 that links to a C/C++ library. It is especially useful when you want to create 
