@@ -35,14 +35,13 @@ def configuration():
     config = Configuration('numpy_c_skeleton', '', None)
 
     # Wrapper code in Cython uses the .pyx extension if we want to USE_CYTHON, 
-    # otherwise it ends in .c. If you have more Cython code, you may want to 
-    # extend this a bit
-    wrapper = 'cython_wrapper.pyx' if USE_CYTHON else 'cython_wrapper.c'
+    # otherwise it ends in .c.
+    wrapper_ext = '*.pyx' if USE_CYTHON else '*.c'
 
     # Sources include the C/Cython code from the wrapper and the source code of 
     # the C library
     sources = [
-            os.path.join('src', wrapper),
+            os.path.join('src', wrapper_ext),
             os.path.join('src', 'c_package', 'src', '*.c'),
             ]
 
