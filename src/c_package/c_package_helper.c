@@ -24,7 +24,7 @@
 
 #include <stdlib.h>
 #include <numpy/arrayobject.h>
-#include "include/code.h"
+#include "include/c_sum.h"
 
 
 /**

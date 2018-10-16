@@ -14,7 +14,7 @@ from numpy.distutils.misc_util import Configuration
 # the C file.
 USE_CYTHON = 'auto'
 
-# If we are in a release, we always never use Cython directly
+# If we are in a release, we never use Cython directly
 IS_RELEASE = os.path.exists('PKG-INFO')
 if IS_RELEASE:
     USE_CYTHON = False
@@ -41,7 +41,7 @@ def configuration():
     # Sources include the C/Cython code from the wrapper and the source code of 
     # the C library
     sources = [
-            os.path.join('src', wrapper_ext),
+            os.path.join('numpy_c_skeleton', 'cython_wrapper', wrapper_ext),
             os.path.join('src', 'c_package', 'src', '*.c'),
             ]
 
@@ -53,7 +53,7 @@ def configuration():
             ]
 
     # Register the extension
-    config.add_extension('cython_wrapper',
+    config.add_extension('cython_wrapper.wrapper',
             sources=sources,
             include_dirs=[
                 os.path.join('src', 'c_package'),
@@ -92,6 +92,10 @@ if __name__ == '__main__':
     attr['license'] = 'GPL v2'
     attr['install_requires'] = ['numpy']
     attr['zip_safe'] = True
+    attr['url'] = 'https://github.com/GjjvdBurg/NumPy_C_Extension'
+
+    from pprint import pprint
+    pprint(attr)
 
     # Finally, run the setup command
     setup(**attr)

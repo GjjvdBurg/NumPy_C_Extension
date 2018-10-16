@@ -9,7 +9,7 @@ import numpy as np
 cimport numpy as np
 
 # Import the definitions from the pxd file
-cimport cython_wrapper
+cimport wrapper
 
 # This needs to be run once 
 # (https://docs.scipy.org/doc/numpy-1.13.0/reference/c-api.array.html#c.import_array)
