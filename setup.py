@@ -94,8 +94,5 @@ if __name__ == '__main__':
     attr['zip_safe'] = True
     attr['url'] = 'https://github.com/GjjvdBurg/NumPy_C_Extension'
 
-    from pprint import pprint
-    pprint(attr)
-
     # Finally, run the setup command
     setup(**attr)
