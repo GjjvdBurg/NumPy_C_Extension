@@ -1,0 +1,6 @@
+include setup.py
+include README.rst
+include LICENSE
+recursive-include numpy_c_skeleton *.py
+recursive-include src *.c
+recursive-include src *.h
